@@ -6,5 +6,4 @@
 		"ms-python.vscode-pylance",
 		"ms-toolsai.jupyter",
 		"janisdd.vscode-edit-csv"
-	]
 }
