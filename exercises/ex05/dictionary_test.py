@@ -20,20 +20,20 @@ def test_invert_use() -> None:
 
 def test_invert_one_use() -> None:
     """Test invert with repeating values."""
+    my_dictionary = {'a': 'c', 'd': 'c'}
     with pytest.raises(KeyError):
-        my_dictionary = {'a': 'c', 'd': 'c'}
         invert(my_dictionary)
 
 
 def test_favorite_color_empty_edge() -> None:
     """Test favorite color empty."""
     test_empty: dict[str, str] = {}
-    assert favorite_color(test_empty) == ""
+    assert favorite_color(test_empty) is None
 
 
 def test_favorite_color_use() -> None:
     """Test favorite color with colors."""
-    test: dict[str, str] = {'sara': 'yellow', 'caroline': 'purple', 'stuti': 'blue'}
+    test: dict[str, str] = {'sara': 'blue', 'caroline': 'purple', 'stuti': 'blue'}
     assert favorite_color(test) == 'blue'
 
 
