@@ -7,7 +7,7 @@ from exercises.ex05.dictionary import invert, favorite_color, count, alphabetize
 import pytest
 
 
-def test_invert_empty_edge() -> None:
+def test_invert_edge() -> None:
     """Test invert empty."""
     assert invert({}) == {}
 
@@ -18,17 +18,17 @@ def test_invert_use() -> None:
     assert invert(test) == {'kiwi': 'strawberry', 'banana': 'yellow', 'lettuce': 'beans'}
 
 
-def test_invert_one_use() -> None:
+def test_invert_use_one() -> None:
     """Test invert with repeating values."""
     my_dictionary = {'a': 'c', 'd': 'c'}
     with pytest.raises(KeyError):
         invert(my_dictionary)
 
 
-def test_favorite_color_empty_edge() -> None:
+def test_favorite_color_edge() -> None:
     """Test favorite color empty."""
     test_empty: dict[str, str] = {}
-    assert favorite_color(test_empty) is None
+    assert favorite_color(test_empty) == ""
 
 
 def test_favorite_color_use() -> None:
